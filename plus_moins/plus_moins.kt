@@ -46,7 +46,7 @@ fun compare() {
     var givenNumber = getNumber()
     var remainingTurns = turns - i
     
-    var remainingTurnsString = "Il vous reste " + remainingTurns + " tour"
+    var remainingTurnsString = "Vous avez joué " + (turns - remainingTurns) + " tours. Il vous reste " + remainingTurns + " tour"
     if (remainingTurns > 1){
       remainingTurnsString += "s."
     }
