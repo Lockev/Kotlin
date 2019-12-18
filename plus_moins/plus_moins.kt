@@ -41,7 +41,7 @@ fun isClose(close: Int){
 }
 
 fun compare() {
-  var random = firstInput()
+  var number = firstInput()
   myLoop@ for (i in 1..turns){
     var givenNumber = getNumber()
     var remainingTurns = turns - i
@@ -61,20 +61,20 @@ fun compare() {
     }
     else{
       when (givenNumber){
-        random -> {
+        number -> {
           println("Vous avez gagné !")
           break@myLoop
         }
-        in 0..random-1 -> {
-          println("Le nombre que vous cherchez est plus grand que le nom que vous avez donné.")
-          isClose(abs(givenNumber - random))
+        in 0..number-1 -> {
+          println("Le nombre que vous cherchez est plus grand que le nombre que vous avez donné.")
+          isClose(abs(givenNumber - number))
           if (i < turns){
             println(remainingTurnsString)
           }
         }
-        in random+1..101 -> {
-          println("Le nombre que vous cherchez est plus petit que le nom que vous avez donné.")
-          isClose(abs(givenNumber - random))
+        in number+1..101 -> {
+          println("Le nombre que vous cherchez est plus petit que le nombre que vous avez donné.")
+          isClose(abs(givenNumber - number))
           if (i < turns){
             println(remainingTurnsString)
           }
